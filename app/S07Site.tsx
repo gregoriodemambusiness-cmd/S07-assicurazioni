@@ -38,7 +38,12 @@ const services = [
   },
 ];
 
-const partners = ["Italiana Assicurazioni", "Prima", "Vittoria Assicurazioni", "Zurich"];
+const partners = [
+  { name: "Italiana Assicurazioni", logo: "https://logo.clearbit.com/italiana.it" },
+  { name: "Prima", logo: "https://logo.clearbit.com/prima.it" },
+  { name: "Vittoria Assicurazioni", logo: "https://logo.clearbit.com/vittoriaassicurazioni.com" },
+  { name: "Zurich", logo: "https://logo.clearbit.com/zurich.com" },
+];
 
 export function S07Site() {
   useEffect(() => {
@@ -184,7 +189,11 @@ export function S07Site() {
         <div className="ai-visual reveal s07-partners">
           <img src="/s07-impresa-ai.png" alt="Protezione assicurativa per aziende e beni" />
           <div className="partner-list">
-            {partners.map((partner) => <span key={partner}>{partner}</span>)}
+            {partners.map((partner) => (
+              <span className="partner-logo-card" key={partner.name}>
+                <img src={partner.logo} alt={partner.name} />
+              </span>
+            ))}
           </div>
         </div>
         <div className="ai-text reveal">
