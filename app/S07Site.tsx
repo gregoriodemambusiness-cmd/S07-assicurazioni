@@ -61,12 +61,11 @@ export function S07Site() {
 
   return (
     <main>
+      <div className="brand-loader" aria-hidden="true">
+        <img src="/s07-logo.png" alt="" />
+      </div>
       <section className="hero-new s07-hero" id="top" onPointerMove={parallax}>
-        <div className="s07-hero-art">
-          <div className="s07-glow s07-glow-a" />
-          <div className="s07-glow s07-glow-b" />
-          <img src="/s07-logo.png" alt="S07 Esse Zero Sette" />
-        </div>
+        <img className="hero-photo" src="/s07-hero-ai.png" alt="Ufficio moderno e consulenza assicurativa in atmosfera blu" />
         <div className="hero-shade s07-shade" />
         <header className="glass-nav">
           <a className="logo logo-image" href="#top">
@@ -79,7 +78,7 @@ export function S07Site() {
             <a href="/contatti">Sedi</a>
           </nav>
           <a className="nav-pill" href="/contatti">
-            Consulenza <i>↗</i>
+            Verifica targa <i>↗</i>
           </a>
         </header>
 
@@ -103,8 +102,8 @@ export function S07Site() {
           <span>02</span>
         </div>
         <a className="hero-cta" href="/contatti">
-          <span>Richiedi una</span>
-          <strong>Consulenza</strong>
+          <span>Controlla la tua</span>
+          <strong>Targa</strong>
           <i>↘</i>
         </a>
         <div className="hero-foot">
@@ -144,8 +143,8 @@ export function S07Site() {
         </div>
         <div className="editorial-grid">
           <div className="portrait-main reveal s07-panel">
-            <img src="/s07-logo.png" alt="Logo S07" />
-            <span className="photo-index">01 / TORINO</span>
+            <img src="/s07-persona-ai.png" alt="Famiglia protetta da una copertura assicurativa" />
+            <span className="photo-index">01 / PERSONA</span>
           </div>
           <div className="editorial-copy reveal">
             <p className="big-copy">Un’agenzia giovane nel linguaggio, solida nel metodo.</p>
@@ -153,10 +152,10 @@ export function S07Site() {
             <a href="/approccio">Scopri il nostro approccio <span>↗</span></a>
           </div>
           <div className="portrait-small reveal s07-mini-panel">
-            <img src="/s07-logo.png" alt="Identità S07" />
+            <img src="/s07-impresa-ai.png" alt="Consulenza assicurativa per imprese" />
             <div><span>Da rischio</span><b>→</b><span>A strategia</span></div>
           </div>
-          <div className="orange-stat reveal">
+          <div className="blue-stat reveal">
             <small>Due sedi</small>
             <strong>Torino.<br />San Mauro.</strong>
             <span>Consulenza vicina, soluzioni complete.</span>
@@ -183,7 +182,10 @@ export function S07Site() {
 
       <section className="ai-panel">
         <div className="ai-visual reveal s07-partners">
-          {partners.map((partner) => <span key={partner}>{partner}</span>)}
+          <img src="/s07-impresa-ai.png" alt="Protezione assicurativa per aziende e beni" />
+          <div className="partner-list">
+            {partners.map((partner) => <span key={partner}>{partner}</span>)}
+          </div>
         </div>
         <div className="ai-text reveal">
           <span className="label">Plurimandatario</span>
@@ -214,6 +216,7 @@ export function S07Site() {
 
       <section className="audience-new" id="sedi">
         <div className="audience-image reveal s07-office-card">
+          <img src="/s07-hero-ai.png" alt="Ufficio consulenza S07" />
           <div className="image-overlay-card">
             <small>Prima sede</small>
             <strong>Corso Principe Eugenio, 42<br />10122 Torino</strong>

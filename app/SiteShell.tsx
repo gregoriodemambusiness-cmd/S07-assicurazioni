@@ -17,7 +17,7 @@ export function SiteShell({children}:{children:React.ReactNode}){
       <nav>
         <a href="/servizi">Soluzioni</a><a href="/approccio">Approccio</a><a href="/studio">Chi siamo</a><a href="/contatti">Sedi</a>
       </nav>
-      <a className="inner-nav-cta" href="/contatti">Consulenza <i>↗</i></a>
+      <a className="inner-nav-cta" href="/contatti">Verifica targa <i>↗</i></a>
     </header>
     {children}
     <footer className="inner-footer">
